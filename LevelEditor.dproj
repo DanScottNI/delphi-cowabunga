@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{819fc11e-31a4-4af8-9a08-6d3fce5d990d}</ProjectGuid>
+    <MainSource>LevelEditor.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>LevelEditor.exe</DCC_DependencyCheckOutputName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_HIDDEN_VIRTUAL>False</DCC_HIDDEN_VIRTUAL>
+    <DCC_UNIT_PLATFORM>False</DCC_UNIT_PLATFORM>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_UNIT_LIBRARY>False</DCC_UNIT_LIBRARY>
+    <DCC_SYMBOL_DEPRECATED>False</DCC_SYMBOL_DEPRECATED>
+    <DCC_SYMBOL_PLATFORM>False</DCC_SYMBOL_PLATFORM>
+    <DCC_UNIT_DEPRECATED>False</DCC_UNIT_DEPRECATED>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">0</VersionInfo><VersionInfo Name="MinorVer">1</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">20</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">2057</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName">DanSoft</VersionInfoKeys><VersionInfoKeys Name="FileDescription">A Teenage Mutant Ninja Turtles editor.</VersionInfoKeys><VersionInfoKeys Name="FileVersion">0.1.0.20</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName">Cowabunga</VersionInfoKeys><VersionInfoKeys Name="ProductVersion">0.1.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments">A Teenage Mutant Ninja Turtles editor.</VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">LevelEditor.dpr</Source></Source></Delphi.Personality><ModelSupport>False</ModelSupport></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(PROJECTDIR)\exportdatetime.vbs"</PreBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="LevelEditor.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="Classes\cBoss.pas" />
+    <DCCReference Include="Classes\cConfiguration.pas" />
+    <DCCReference Include="Classes\cEnemy.pas" />
+    <DCCReference Include="Classes\cEntrance.pas" />
+    <DCCReference Include="Classes\cLevel.pas" />
+    <DCCReference Include="Classes\cNameTable.pas" />
+    <DCCReference Include="Classes\cROMdata.pas" />
+    <DCCReference Include="Classes\cSolidity.pas" />
+    <DCCReference Include="Classes\cSpecobj.pas" />
+    <DCCReference Include="Classes\cWorldEnemy.pas" />
+    <DCCReference Include="Debug\fDebug.pas">
+      <Form>frmDebug</Form>
+    </DCCReference>
+    <DCCReference Include="Debug\fDebugROMViewer.pas">
+      <Form>frmDebugROMViewer</Form>
+    </DCCReference>
+    <DCCReference Include="fAbout.pas">
+      <Form>frmAbout</Form>
+    </DCCReference>
+    <DCCReference Include="fBackupManagement.pas">
+      <Form>frmBackupManagement</Form>
+    </DCCReference>
+    <DCCReference Include="fBossProperties.pas">
+      <Form>frmBossProperties</Form>
+    </DCCReference>
+    <DCCReference Include="fDistribution.pas">
+      <Form>frmDistribution</Form>
+    </DCCReference>
+    <DCCReference Include="fEditorMain.pas">
+      <Form>frmEditorMain</Form>
+    </DCCReference>
+    <DCCReference Include="fEnemyProperties.pas">
+      <Form>frmEnemyProperties</Form>
+    </DCCReference>
+    <DCCReference Include="fEntranceProperties.pas">
+      <Form>frmEntranceProperties</Form>
+    </DCCReference>
+    <DCCReference Include="fFileProperties.pas">
+      <Form>frmFileProperties</Form>
+    </DCCReference>
+    <DCCReference Include="fGoToLevel.pas">
+      <Form>frmGoToLevel</Form>
+    </DCCReference>
+    <DCCReference Include="fKeyboardLayouts.pas">
+      <Form>frmKeyboardLayout</Form>
+    </DCCReference>
+    <DCCReference Include="fLevelMap.pas">
+      <Form>frmLevelMap</Form>
+    </DCCReference>
+    <DCCReference Include="fLevelSettings.pas">
+      <Form>frmLevelSettings</Form>
+    </DCCReference>
+    <DCCReference Include="fOpenDialog.pas">
+      <Form>frmOpenDialog</Form>
+    </DCCReference>
+    <DCCReference Include="fPaletteEditor.pas">
+      <Form>frmPaletteEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fPreferences.pas">
+      <Form>frmPreferences</Form>
+    </DCCReference>
+    <DCCReference Include="fScrollEditor.pas">
+      <Form>frmScrollEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fSolidityEditor.pas">
+      <Form>frmSolidityEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fSpecialObjProperties.pas">
+      <Form>frmSpecialObjProperties</Form>
+    </DCCReference>
+    <DCCReference Include="fTileEditor.pas">
+      <Form>frm16x16TileEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fTSAEditor.pas">
+      <Form>frmTSA</Form>
+    </DCCReference>
+    <DCCReference Include="fWorldMapEditor.pas">
+      <Form>frmWorldMapEditor</Form>
+    </DCCReference>
+    <DCCReference Include="fWorldScreenNumbers.pas">
+      <Form>frmWorldScreenCount</Form>
+    </DCCReference>
+    <DCCReference Include="uConsts.pas" />
+    <DCCReference Include="uLunarcompress.pas" />
+    <DCCReference Include="uResourcestrings.pas" />
+    <DCCReference Include="uToday.pas" />
+    <None Include="Data\enemy.dat" />
+    <None Include="Data\specobj.dat" />
+    <None Include="Data\Teenage Mutant Ninja Turtles (U) (!).ini" />
+    <None Include="Data\tiletypes.dat" />
+  </ItemGroup>
+</Project>

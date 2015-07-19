@@ -1,0 +1,16 @@
+[OPTIONS]
+Compatibility=1.1
+Contents file=contpage.hhc
+Default Window=Main
+Default topic=introduction.htm
+Default font=MS Sans Serif,8,0
+Full-text search=Yes
+Language=0x0409
+Title=Cowabunga
+
+[WINDOWS]
+Main="","contpage.hhc",,"introduction.htm","introduction.htm",,,,,0x061520,207,0x304E,[353,17,1152,687],0xb0000,,,,,,0
+
+[FILES]
+Introduction.htm
+YourAss.htm
